@@ -1,5 +1,26 @@
 body{
     background-color: rgba(181, 24, 24, 0.619);
+    text-align: center;
+}
+
+
+
+/* Travail sur la section */
+
+section{
+    width: 50vw;
+    line-height: 20vh;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+table{
+    margin: auto;
 }
 
 tr{
