@@ -1,0 +1,15 @@
+body{
+    background-color: rgba(181, 24, 24, 0.619);
+}
+
+tr{
+    height: 100px;
+}
+
+td{
+    width:100px;
+    border: solid 1px darkkhaki;
+    text-align: center;
+    color: darkkhaki;
+    font-weight: bold;
+}
