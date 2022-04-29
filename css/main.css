@@ -20,10 +20,12 @@ section{
 }
 
 table{
+    
     margin: auto;
 }
 
 tr{
+    margin-top: 5vh;
     height: 100px;
 }
 
