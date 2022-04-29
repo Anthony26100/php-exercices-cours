@@ -21,6 +21,15 @@
             echo ($couleur[$i]."<br/>");
         }
 
+        echo("<br/>");
+        for($i=0;$i<count($couleur);$i++){
+            if ($couleur[$i]=='vert'){
+                break;
+            }
+            echo ($couleur[$i]."<br/>");
+        }
+
+
     ?>    
 
 </body>
