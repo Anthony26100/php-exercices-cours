@@ -64,9 +64,10 @@
             $compteur=0;
             $nbcar = 0;
             while($compteur<$nb_apres_traitement){
-                if($caractere=$texte[$compteur]){
+                if($caractere==$texte[$compteur]){
                     $nbcar++;
                 }
+
 
                 $compteur++;
             }
@@ -76,6 +77,28 @@
             }else{
                 echo("Vous n'avez aucun caractere trouvé" );
             }
+
+            // Modification de la lettre 
+            $caractereReplace = $_POST['remplacer'];
+             
+            // Parcourir la chaine de caractère
+            echo("<section>");
+            $compteur=0;
+                echo("<table>");
+                    while($compteur<$nb_apres_traitement){
+                        echo("<tr><td>");
+                            if($caractere==$texte[$compteur]){
+                                $texte[$compteur]=$caractereReplace;
+                                echo($texte[$compteur]);
+                            }else{
+                                echo($texte[$compteur]);
+                            }
+                        echo("</td></tr>");
+
+                        $compteur++;
+                    }
+                echo("</table>");
+            echo("</section>");
         }
 
         ?>
