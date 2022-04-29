@@ -13,14 +13,14 @@
 
         $couleur = array('bleu','vert','orange','rose');
         $cpt=0;
-        // Utilisation de continue
+        // Utilisation de continue continue jusqu'à enlever l'élément
         for($i=0;$i<count($couleur);$i++){
             if ($couleur[$i]=='vert'){
                 continue;
             }
             echo ($couleur[$i]."<br/>");
         }
-
+        // Break s'arrete des que la condition est vrai
         echo("<br/>");
         for($i=0;$i<count($couleur);$i++){
             if ($couleur[$i]=='vert'){
