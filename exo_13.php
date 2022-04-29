@@ -9,7 +9,7 @@
     <title>Do While</title>
 </head>
 <body>
-    <form action="exo_12_exercice" method="post">
+    <form action="exo_13" method="post">
         <div>Indiquer vos le nombre de compétences que vous voulez : <br/>
                 <input type="text" name="nombres" />
                 <input type="submit" name="envoyer"/>
@@ -17,7 +17,7 @@
             
             <?php
                 if(isset($_POST['envoyer'])){
-                    $nombres=$_POST['nombres'];
+                    $nombres=$_POST['nombres']+1;
                     $competence=1;
                     for($compteur=1;$compteur<$nombres;$compteur++){
                         echo("<p> Compétence $competence :  </p>"."<input type='text' name='competence'><br/>");
@@ -31,6 +31,7 @@
                 if(isset($_POST['afficher'])){
                     $affiche=$_POST['competence'];
                     echo("<br>affichage texte : $affiche");
+
                 }
             ?>
 

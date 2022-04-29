@@ -1,8 +1,3 @@
-<?php
-    $compteur=0;
-    $longueur=5;
-
-?>
 <!DOCTYPE html>
 <html lang="FR-fr">
 <head>
@@ -13,9 +8,20 @@
     <title>Do While</title>
 </head>
 <body>
+    
     <?php
-        for($i=0,$total=0;$i<=5;$total+=$i,$nombre[]=$i++);
-        echo implode('+',$nombre)."=".$total;
-    ?>
+
+        $couleur = array('bleu','vert','orange','rose');
+        $cpt=0;
+        // Utilisation de continue
+        for($i=0;$i<count($couleur);$i++){
+            if ($couleur[$i]=='vert'){
+                continue;
+            }
+            echo ($couleur[$i]."<br/>");
+        }
+
+    ?>    
+
 </body>
 </html>
