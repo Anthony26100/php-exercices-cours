@@ -16,10 +16,10 @@
             <input type="reset" value="Effacer" name="annuler"/> 
             <br/>
             <label>Caractere à comptabiliser</label>
-            <input type="text" name="chaine" placeholder="Saisie votre texte"  maxlength="1" required/>
+            <input type="text" name="trouver" placeholder="Saisie votre texte"  maxlength="1" required/>
 
             <label>Caractere à remplacer</label>
-            <input type="text" name="chaine" placeholder="Saisie votre texte"  maxlength="1" required/>
+            <input type="text" name="remplacer" placeholder="Saisie votre texte"  maxlength="1" required/>
         </form>
     </section>
     
