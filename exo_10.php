@@ -30,17 +30,15 @@
             $compteur=0;
 
             // Compter le nom de caracteres avant traitement
-
             $nb_avant_traitement=strlen($texte);
             echo "vous avez saisie : ".$nb_avant_traitement." caracteres<br/>";
 
 
             // Supprimer les chaines vides en debut et fin
-            
+        
             $texte=chop($texte);
 
             // Compter le nombre de caracteres apres traitement
-
             $nb_apres_traitement=strlen($texte);
             echo "vous avez saisie : ".$nb_apres_traitement." caracteres<br/>";
 
@@ -58,7 +56,28 @@
                 }
 
             echo("<table>");
+            
+            // Compter le nom de caracteres à remplacer suivant son choix
+            $caractere = $_POST['trouver'];
+             
+            // Parcourir la chaine de caractère
+            $compteur=0;
+            $nbcar = 0;
+            while($compteur<$nb_apres_traitement){
+                if($caractere=$texte[$compteur]){
+                    $nbcar++;
+                }
+
+                $compteur++;
+            }
+
+            if($nbcar!=0){
+                echo("Vous avez dans votre chaine de caractere : $nbcar caractères trouvés");
+            }else{
+                echo("Vous n'avez aucun caractere trouvé" );
+            }
         }
+
         ?>
 
    
