@@ -14,10 +14,18 @@
 <body>
     <form action="" method="post">
         <div>Indiquer vos cinq compétences principales : <br/>
+           <!-- Nouvelle syntaxe PHP 8/7.4 -->
             <?php for($compteur=1;$compteur<$nombre;$compteur++): ?>
                 <input type="text" name="" id=""/><br/>
             <?php endfor ?>
             <input type="submit" value="soumettre">
+            <!-- Ancienne syntaxe mais toujours valide-->
+             <?php 
+                for($compteur=1;$compteur<$nombre;$compteur++){
+                    echo("<input type='text' name='competence'>");
+             }
+            ?>
+
         </div>
    </form>
 </body>
