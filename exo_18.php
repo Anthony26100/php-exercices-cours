@@ -11,8 +11,8 @@
     <form action="" method="post">
         <label>Saisir votre caractere</label>
     <input type="text" name="lettre" >
-    <input type="submit" name="envoyer">
-    <input type="submit" name="envoyer2">
+    <input type="submit" name="envoyer" value="Premier">
+    <input type="submit" name="envoyer2" value="Deuxieme">
     <?php
         $lettre = strtoupper($_POST['lettre']);
         
