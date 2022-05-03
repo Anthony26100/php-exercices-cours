@@ -22,11 +22,13 @@ section{
 table{
     
     margin: auto;
+    width: 100%;
 }
 
 tr{
     margin-top: 5vh;
     height: 100px;
+    width: 100px;
 }
 
 td{

@@ -33,16 +33,22 @@
        </form>
    </section>
    <section>
+       <table>
        <?php
           if(isset($_POST['soumettre'])){
             //  print_r($_POST['choix']); Affiche les valeurs
             $nb=count($_POST['choix']);
             for($i=0;$i<$nb;$i++){
-                echo($_POST['choix'][$i]."<br/>");
+                echo("<tr><td>".$_POST['choix'][$i]."<br/>"."</td></tr>");
+            }
+
+            // foreach boucle assosiatif 
+            foreach($_POST['choix'] as $indice=>$valeur){
+                echo ('<tr><td>'.'Compétences : '.$indice.' = '.$valeur.'<br/>'.'</td></tr>');
             }
           }
        ?>
-   </section>
-
+       </table>
+   </section>    
 </body>
 </html>
