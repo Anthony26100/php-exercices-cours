@@ -9,34 +9,17 @@
     <title>Do While</title>
 </head>
 <body>
-    <form action="exo_13" method="post">
-        <div>Indiquer vos le nombre de compétences que vous voulez : <br/>
-                <input type="text" name="nombres" />
-                <input type="submit" name="envoyer"/>
-                
-            
-            <?php
-                if(isset($_POST['envoyer'])){
-                    $nombres=$_POST['nombres']+1;
-                    $competence=1;
-                    for($compteur=1;$compteur<$nombres;$compteur++){
-                        echo("<p> Compétence $competence :  </p>"."<input type='text' name='competence'><br/>");
+    <section>
+        <h1>Combien vous désirez ajouter de compétences ?</h1>
+        <form action="exo_13.php" method="post">
+            <input type="text" name="choix">
+            <input type="submit" name="soumettre1" value="Soumettre">
+        </form>
+   </section>
 
-                    }
-                }
-            ?>
-            <input type="submit" name="afficher"/>
-
-            <?php
-                if(isset($_POST['afficher'])){
-                    $affiche=$_POST['competence'];
-                    echo("<br>affichage texte : $affiche");
-
-                }
-            ?>
-
-
-        </div>
-   </form>
+   <section>
+       <h1>Ajouter vos compétences</h1>
+   </section>
+   
 </body>
 </html>
