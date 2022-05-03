@@ -37,16 +37,34 @@
        <?php
           if(isset($_POST['soumettre'])){
             //  print_r($_POST['choix']); Affiche les valeurs
+
+            // structure avec for()
             $nb=count($_POST['choix']);
             for($i=0;$i<$nb;$i++){
                 echo("<tr><td>".$_POST['choix'][$i]."<br/>"."</td></tr>");
             }
+            
 
-            // foreach boucle assosiatif 
+            // structure avec foreach() boucle assosiatif 
             foreach($_POST['choix'] as $indice=>$valeur){
                 echo ('<tr><td>'.'Compétences : '.$indice.' = '.$valeur.'<br/>'.'</td></tr>');
             }
-          }
+            // Structure de controle while
+            
+            $i=0;
+            while($i<$nb){
+                echo("<tr><td>".$_POST['choix'][$i]."</td></tr>");
+                $i++;
+            }
+
+            // Structure de controle Do While
+            $i=0;
+            do{
+                echo("<tr><td>".$_POST['choix'][$i]."</td></tr>");
+                $i++;
+            }while($i<$nb);
+        }
+            echo("<br/>");
        ?>
        </table>
    </section>    
