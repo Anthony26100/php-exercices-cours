@@ -1,3 +1,5 @@
+<!-- Toujours regarder la version de PHP pour savoir si les fonctions fonctionne toujours et son actuel -->
+
 <!DOCTYPE html>
 <html lang="FR-fr">
 <head>
@@ -61,7 +63,38 @@
 
         echo str_repeat("__",84);
 
-        
+        echo("<h2> strpos() / strrpos() </h2>");
+        $mail="geek@gmail.com";
+        // $position=strrpos($mail,"@"); Avec nouvelle syntax
+        $position=strpos($mail,"@");
+        echo("La position de votre caractere @ est : ".$position."<br/>"); // commence avec l'index à 0
+        $position=strpos($mail,"gmail");
+        echo("La position de votre caractere gmail est : ".$position."<br/>");
+        $position=strpos($mail,"com");
+        echo("La position de votre caractere com est : ".$position."<br/>");
+
+        echo str_repeat("__",84);
+
+        echo("<h2> strstr() </h2>");
+        $mail="geeks-@geeks-gmail.com";
+        $caractere=strstr($mail,'-');
+        echo("La première occurence de - est ".$caractere."<br/>");
+
+        echo str_repeat("__",84);
+
+        echo("<h2> strisstr() / strrchr() </h2>");
+        $reste=stristr($mail,'geeks');
+        echo("La première occurence de geeks est ".$reste)."<br/>";
+        $caractere=strrchr($mail,'-');
+        echo("La dernière occurence de geeks est ".$caractere)."<br/>";
+
+        echo str_repeat("__",84);
+
+        echo("<h2> str_replace() </h2>");
+        $chaine="A que coucou";
+        $recherche="u";
+        $remplacer="i";
+        echo "La chaine de départ est : $chaine "." devient : ".str_replace($recherche,$remplacer,$chaine);
     ?>
 </body>
 </html>
