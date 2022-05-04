@@ -16,7 +16,8 @@
         $avant='';
 
         echo("<br/>");
-        foreach($chaine as $indice => $valeur){            $avant.=$valeur;
+        foreach($chaine as $indice => $valeur){            
+            $avant.=$valeur;
             $traitement.=str_replace($rechercher,$remplacer,$chaine[$indice]);
         }
             echo("Mon texte de départ : ".$avant."<br/>");
