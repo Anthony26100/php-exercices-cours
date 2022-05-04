@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>BLOQUER TEMPORAIREMENT</h1>
+    <button onclick="history.back()">Retour</button>
 </body>
 </html>

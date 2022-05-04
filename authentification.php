@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>VOUS ETES CONNECT2E !</h1>
+    <button onclick="history.back()">Retour</button>
 </body>
 </html>
