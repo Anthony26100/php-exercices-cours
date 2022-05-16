@@ -1,0 +1,40 @@
+body{
+    background-color: rgba(181, 24, 24, 0.619);
+    text-align: center;
+}
+
+
+
+/* Travail sur la section */
+
+section{
+    width: 50vw;
+    line-height: 30vh;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+table{
+    
+    margin: auto;
+    width: 100%;
+}
+
+tr{
+    margin-top: 5vh;
+    height: 100px;
+    width: 100px;
+}
+
+td{
+    width:100px;
+    border: solid 1px darkkhaki;
+    text-align: center;
+    color: darkkhaki;
+    font-weight: bold;
+}
