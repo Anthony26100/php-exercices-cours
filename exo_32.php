@@ -1,7 +1,7 @@
 <?php
-    $nom="Geek"
+    $civilite="GEEK & DWWM";
 
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,8 @@
 </head>
 <body> 
     <!-- Pour reciperer une varible dans une autre page etc...-->
-    <a href="exo_32-1.php?nom=<?= $nom ?>" >Exercice 31-1</a>
+    <!-- Ca encode par des %,x,y-->
+    <a href="exo_32-1.php?civilite=<?= rawurlencode($civilite) ?>" >Exercice 32-1</a>
 
     
 </body>
