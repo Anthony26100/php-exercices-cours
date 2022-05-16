@@ -14,7 +14,7 @@
 </head>
 <body> 
     <!-- Pour reciperer une varible dans une autre page etc...-->
-    <a href="exo_31-1.php?nom=<?= $nom ?>" >Exercice 31-1</a>
+    <a href="exo_32-1.php?nom=<?= $nom ?>" >Exercice 31-1</a>
 
     
 </body>
