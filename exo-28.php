@@ -12,7 +12,7 @@
         <label>Valeur début : </label>
         <input type="number" name="nb1" placeholder="Valeur de début">
         <label>Valeur Fin : </label>
-        <input type="number" name="nb2" placeholder="Valeur de début">
+        <input type="number" name="nb2" placeholder="Valeur de fin">
         <input type="submit"  name="envoyer">
     </form>
     <section>
