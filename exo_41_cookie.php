@@ -9,6 +9,16 @@
 <body>
     <h1>La Gestion des cookies</h1>
 
-    
+    <?php
+        // Creation des cookies
+
+        setcookie('Prenom','Dédé');
+
+        // Cookies valable 24 heures
+        /* time() = temps actuel + 24h = (86400) */
+        setcookie('Prenom','Dédé', time() + 86400);
+
+
+    ?>
 </body>
 </html>
