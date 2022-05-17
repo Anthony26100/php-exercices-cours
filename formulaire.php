@@ -16,7 +16,7 @@
         <form action="formulaire.php" method="POST">
             <input type="text" name="nom" placeholder="nom" required maxlength="25">
             <input type="text" name="objet" placeholder="objet" required maxlength="25">
-            <textarea name="message" id="message" cols="30" rows="10" maxlength="250" placeholder="Message"></textarea>
+            <textarea name="message" id="message" cols="10" rows="5" maxlength="255" placeholder="Message"></textarea>
             <input type="submit" value="valider" name="valider">
             <input type="reset" value="annuler">
         </form>
