@@ -11,7 +11,7 @@
     <!--Si le fichier n'existe pas, il doit etre crée-->
     <?php
     // Permet de voir si le dossier existe et s'il n'existe pas il le creer
-    $fichier = file_exists('geek.txt');
+    $fichier = file_exists('./fichier/geek.txt');
     if($fichier){
         echo 'le fichier existe';
     }else{
@@ -19,7 +19,7 @@
         echo "fichier créez";
     }
     // Exemple 1 : Ecrire dans un fichier
-    $fichier=fopen("geek.txt","a+");
+    $fichier=fopen("./fichier/geek.txt","a+");
     fwrite($fichier,"Sandrine Dubief \n");
 
     // Fermer l'instance du fichier
@@ -30,7 +30,7 @@
     echo "<strong> Exemple 1 : </strong> ";
 
     // Exemple 1 : Afficher le fichier texte
-    $fichier=fopen("geek.txt","r");
+    $fichier=fopen("./fichier/geek.txt","r");
     // fread() lis le fichier et filesize() affiche tout les éléments du fichier
     $texte=fread($fichier,filesize('geek.txt'));
     echo $texte;
@@ -53,7 +53,7 @@
     echo "<strong> Exemple 3 : </strong> ";
     
     // Exemple 3 : Afficher le fichier texte
-    $fichier=fopen("geek.txt","r");
+    $fichier=fopen("./fichier/geek.txt","r");
     //fpassthru() : affiche le texte avec la taille du fichier(octets)
     $texte=fpassthru($fichier);
     echo $texte;
@@ -64,17 +64,25 @@
     echo "<strong> Exemple 4 : </strong> "; 
 
     // Exemple 4 : Afficher le fichier texte
-    $fichier=fopen("geek.txt","r");
+    $fichier=fopen("./fichier/geek.txt","r");
     //readfile() : affiche le texte avec la taille du fichier(octet)
     $texte=readfile("geek.txt");
     echo $texte;
     fclose($fichier);
 
+    // --------------------------------------------
     echo '<br/>'.str_repeat('____',84).'<br/>';
-
     echo '<h2>Affichage des repertoires</h2>';
 
-    
+    // Ouvrir le repertoire
+    $dir = opendir('./fichier');
+    echo $dir;
+    // Lire le repertoire
+    while($fichier=readdir(($dir))){
+        echo $fichier.'<br/>';
+    }
+    // Fermer le repertoire
+    closedir($dir);
     ?>
 
     
