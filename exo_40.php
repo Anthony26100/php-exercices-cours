@@ -10,7 +10,7 @@
     <h1>Quelques opération de base sur les fichiers</h1>
     <!--Si le fichier n'existe pas, il doit etre crée-->
     <?php
-    // Permet de voir si le dossier existe et s'y il n'existe pas il le creer
+    // Permet de voir si le dossier existe et s'il n'existe pas il le creer
     $fichier = file_exists('geek.txt');
     if($fichier){
         echo 'le fichier existe';
@@ -70,7 +70,13 @@
     echo $texte;
     fclose($fichier);
 
+    echo '<br/>'.str_repeat('____',84).'<br/>';
+
+    echo '<h2>Affichage des repertoires</h2>';
+
     
     ?>
+
+    
 </body>
 </html>
