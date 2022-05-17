@@ -3,7 +3,8 @@
 if (isset($_POST['envoyer'])) {
     $pseudo = $_POST['pseudo'];
     $password = $_POST['password'];
-    if ($pseudo == "toto" && $password == "thor") {
+    $tableau = array('user'=>'superman', 'password' => 'toor');
+    if ($pseudo == $tableau['user'] && $password == $tableau['password']) {
         $ok1=setcookie('pseudo',$password, time()+(30*24*3600));
         echo 'reussis';
     }else{
