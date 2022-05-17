@@ -17,7 +17,7 @@
     <head>
         <meta charset="utf-8" />
         <title> Inclusion de fichier</title>
-        <link rel="stylesheet" href="css/main5.css" />
+        <link rel="stylesheet" href="css/styles.css" />
         
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comforter+Brush&family=Dancing+Script:wght@600&family=Grape+Nuts&family=Josefin+Sans&family=Mochiy+Pop+P+One&family=Oswald:wght@500&family=Redressed&family=Sedgwick+Ave&family=The+Nautigal&display=swap" rel="stylesheet">
        
@@ -52,7 +52,7 @@
             <?php
                 $fichier=fopen("livre.txt","r");
                     while (!feof($fichier)){
-                            echo fgets($fichier)."<br/>";
+                            echo fgets($fichier)."<br/>"; // lis chaque ligne
                     }
                 fclose($fichier);
                         
