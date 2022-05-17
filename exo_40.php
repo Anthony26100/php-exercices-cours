@@ -83,6 +83,17 @@
     }
     // Fermer le repertoire
     closedir($dir);
+
+    // --------------------------------------------
+    echo '<br/>'.str_repeat('____',84).'<br/>';
+    echo '<h2>Affichage des repertoires</h2>';
+
+    // Lister le contenu d'un dossier
+    $fichier = scandir('./fichier');
+    //Parcourir le résultat
+    foreach($fichier as $fichiers){
+        echo $fichiers;
+    }
     ?>
 
     
