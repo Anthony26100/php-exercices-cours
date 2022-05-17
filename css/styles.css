@@ -13,14 +13,15 @@ section{
     background-color: tomato;
     color: white;
     text-align: center;
-    margin: auto;
-    margin-top: 50px;
+    /* margin: auto;
+    margin-top: 50px; */
     border-radius: 10px;
     border: solid 1px white;
+    display: flex;
+
 }
 
 table{
-    
     margin: auto;
     width: 100%;
 }
