@@ -15,22 +15,13 @@
 
 <body>
     <?php
-    // htmlentities = traitement de la donné en texte pour eviter les injection script(js)
-        echo htmlentities($_POST['prenom']).'<br/>';
-        echo htmlentities($_POST['nom']).'<br/>';
-    // trim() supprime les espaces en ajoutant htmlentities qui traite
-        $prenom=htmlentities(trim($_POST['prenom'])).'<br/>';
-        $nom=htmlentities(trim($_POST['nom'])).'<br/>';
-
-        // echo $prenom."<br/>";
-        // echo $nom."<br/>";
-
-    // 
     $id = session_id();
-    $_SESSION['nom']=$_POST['nom'];
-    $_SESSION['prenom']=$_POST['prenom'];
+
     echo $id;
-    echo "<a href='affichage.php'> Affichage </a>"
+    echo $_SESSION['nom'];
+    echo $_SESSION['prenom'];
+
+    echo "<a href='cookie_SESSION.php'> Retour SESSION </a>"
     ?>
     
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
