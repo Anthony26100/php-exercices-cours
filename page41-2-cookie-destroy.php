@@ -1,19 +1,19 @@
 <?php
 
-if (isset($_POST['envoyer'])) {
-    $pseudo = $_POST['pseudo'];
-    $password = $_POST['password'];
-    $tableau = array('user'=>'superman', 'password' => 'toor');
-    if ($pseudo == $tableau['user'] && $password == $tableau['password']) {
-        $ok1=setcookie('user',$password, time()+(30*24*3600));
-        header('Location: validation.php');
-        echo 'reussis';
-    }else{
-        $ok1 = setcookie('user',$password,time()-(30*24*3600));
-        header('Location: authentification.php');
-        echo 'supprimer';
+    if (isset($_POST['envoyer'])) {
+        $pseudo = $_POST['pseudo'];
+        $password = $_POST['password'];
+        $tableau = array('user'=>'superman', 'password' => 'toor');
+        if ($pseudo == $tableau['user'] && $password == $tableau['password']) {
+            $ok1=setcookie('user',$password, time()+(30*24*3600));
+            header('Location: validation.php');
+            echo 'reussis';
+        }else{
+            $ok1 = setcookie('user',$password,time()-(30*24*3600));
+            header('Location: authentification.php');
+            echo 'supprimer';
+        }
     }
-}
 
 ?>
 

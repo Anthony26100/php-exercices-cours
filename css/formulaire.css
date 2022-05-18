@@ -56,8 +56,12 @@ strong{
     text-align: center;
 }
 
-input[type=submit], input[type=reset], input[type=text]{
+input[type=submit], input[type=reset], input[type=text], input[type=password]{
     border-radius: 15px;
 }
 
+a{
+    margin: auto;
+    color: wheat;
+}
 
