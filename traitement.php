@@ -18,6 +18,12 @@
     // htmlentities = traitement de la donné en texte pour eviter les injection script(js)
         echo htmlentities($_POST['prenom']).'<br/>';
         echo htmlentities($_POST['nom']).'<br/>';
+    // trim() supprime les espaces
+        $prenom=htmlentities(trim($_POST['prenom'])).'<br/>';
+        $nom=htmlentities(trim($_POST['nom'])).'<br/>';
+
+        echo $prenom."<br/>";
+        echo $nom."<br/>";
 
 
     ?>
