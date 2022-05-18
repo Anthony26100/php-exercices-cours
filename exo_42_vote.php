@@ -28,7 +28,7 @@
             }
             ?>
             <script language="javascript" type="text/javascript">
-                alert("Merci pour votre vote : <?php echo $_POST['choix'] ?>");
+                alert("Merci pour votre vote : <?php echo $_POST['choixjj'] ?>");
             </script>
             <?php
         }
