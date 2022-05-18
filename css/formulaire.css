@@ -1,10 +1,12 @@
 body{
-    background-color: rgba(181, 24, 24, 0.619);
+    background-color: rgb(163, 40, 40);
+    background-image: url('https://cdn.pixabay.com/photo/2016/02/11/22/54/isolated-1194899_960_720.png');
+    background-repeat: no-repeat;
 }
 
-section.sect{
+section{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 h1{
@@ -14,10 +16,13 @@ h1{
     color: gold;
 }
 
+h2{
+    text-align: center;
+}
+
 form{
     display: flex;
     justify-content: center; 
-    flex-direction: column;
     align-content: center;
     width: 100%;
     align-items: center;
@@ -54,6 +59,5 @@ strong{
 input[type=submit], input[type=reset], input[type=text]{
     border-radius: 15px;
 }
-
 
 
