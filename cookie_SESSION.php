@@ -13,16 +13,16 @@
 <body>
     <h2>Bienvenue sur le site des $_SESSION de la formation DWWM</h2>
     <section>
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form action="traitement.php" method="post">
             <fieldset>
                 <legend>Authentification</legend>
 
                 <label for="prenom">Prénom</label>
-                <input type="text" name="prenom" id="" value="PHP et MySQL">
+                <input type="text" name="prenom" id="" placeholder="Prenom" required>
                 
 
                 <label for="nom">Nom</label>
-                <input type="text" name="nom" id="" value="PHP et MySQL">
+                <input type="text" name="nom" id="" placeholder="Nom" required>
                 
                 <input type="submit" name="envoyer" value="ENVOYER">
                 <input type="submit" name="annueler" value="ANNULER">
