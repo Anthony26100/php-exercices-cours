@@ -1,6 +1,6 @@
 <?php
 
-    // error_reporting(0);
+    error_reporting(0);
 
     session_start();
 
@@ -21,7 +21,7 @@
         session_unset();
         session_destroy();
     }
-    $total_prix=0;
+
     if (isset($_POST['verifier'])) {
         $tab_code=explode("/",$_SESSION['code']);
         $tab_article=explode("/",$_SESSION['article']);
@@ -32,15 +32,13 @@
     echo "<tr><td colspan='3'>Récapitulatif de votre commande</td></tr>";
     echo "<tr><th>&nbsp;Code&nbsp;</th><th>&nbsp;Article&nbsp;</th><th>&nbsp;Prix&nbsp;</th></tr>";
 
-    for ($i=1;$i<count($tab_code);$i++) { 
-        echo ("<tr><td>{$tab_code[$i]}</td><td>{$tab_article[$i]}</td><td>{$tab_prix[$i]}</td></tr>");
-        $total_prix=$total_prix+$tab_prix[$i];
+    for ($i=1; $i < count($tab_code); $i++) { 
+        echo "<tr><td>&nbsp;{$tab_code[$i]}</td><td>&nbsp;{$tab_article[$i]}</td><td>&nbsp;{$tab_prix[$i]}</td></tr>";
     }
-        echo"<tr><td colspan='3'>$total_prix</td></tr>";
+
     echo "</table>";
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="FR-fr">
@@ -48,35 +46,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/formulaire.css">
-    <title>PANIER MENU</title>
+    <link rel="stylesheet" href="css/gestion-formulaire.css">
+    <title>Document</title>
 </head>
+
 <body>
-    <h2>ENREGISTREMENT ARTICLES</h2>
+
     <section>
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            <fieldset>
-                <legend>Saisies d'articles</legend>
-
-                <label for="code">Code : </label>
-                <input type="text" name="code" id="" placeholder="Code Article" >
-                
-
-                <label for="article">Article : </label>
-                <input type="text" name="article" id="" placeholder="Nom Article" >
-                
-
-                <label for="prix">Prix : </label>
-                <input type="text" name="prix" id="" placeholder="Prix Article" >
-                
-
-                <input type="submit" name="ajouter" value="AJOUTER">
-                <input type="submit" name="verifier" value="VERIFIER">
-                <input type="submit" name="logout" value="LOGOUT">
-                
-
-            </fieldset>
-        </form>
+        <div class="container-form">
+            <h1>Gestion de panier</h1>
+            <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+                <input type="text" name="code" placeholder="Code" class="input-login">
+                <input type="text" name="article" placeholder="Article" class="input-pass">
+                <input type="text" name="prix" placeholder="Prix" class="input-pass">
+                <input type="submit" name="ajouter" value="AJOUTER" class="btn-ajouter">
+                <input type="submit" name="verifier" value="VERIFIER" class="btn-verifier">
+                <input type="submit" name="logout" value="LOG OUT" class="btn-logout">
+            </form>
+        </div>
     </section>
+
 </body>
 </html>
