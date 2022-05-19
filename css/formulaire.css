@@ -58,6 +58,8 @@ strong{
 
 input[type=submit], input[type=reset], input[type=text], input[type=password]{
     border-radius: 15px;
+    width: 100%;
+    height: 50%;
 }
 
 a{
