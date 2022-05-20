@@ -46,7 +46,7 @@
 
         // Utilisation de l'algorithme en password de hash
 
-        var_dump(password_hash($password))
+        // var_dump(password_hash($password));
 
         ?>
     </section>
