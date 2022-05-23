@@ -3,15 +3,16 @@
     function diviser($x){
         $a= 5 ;
         if(!$x){
-            // Pour declarer notre erreur
+            // Pour declarer notre message erreur
             throw new Exception('division par zéro impossible !');
         }
         return $a/$x;
     }
 
     try{
-        // Pour essayer la fonction
+        // Pour essayer la fonction ou autres try = essai
         echo diviser(10)."<br/>";
+
         echo diviser(0)."<br/>";
     }
     catch(Exception $error){
