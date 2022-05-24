@@ -1,7 +1,27 @@
 <?php
     session_start();
 
+    if(isset($_POST['soumettre'])){
+        if(htmlspecialchars($_POST['password']=="toor")){ // En pêche l'integration de code malveillant dans l'input
+            header('Location: authentificationScrud.php');
+            exit();
+        }else{
+            $_SESSION['compteur']++;
+            if($_SESSION['compteur'] < 4){
+                header('Location: index.php');  
+            }else{
+                header('Location: noauthentificationScrud.php');
+                $_SESSION['compteur']=0;
+                exit();
+            }
+        }
+    }
 
+    if(isset($_SESSION['compteur'])){
+        echo $_SESSION['compteur'];
+    }else{
+        $_SESSION['compteur']=0;
+    }
 
     // Suppression de l'initialisation de l'ID session
 
@@ -33,7 +53,7 @@
                             <label for="login">Login</label>
                         </td>
                         <td>
-                            <input type="text" name="login" id="" required placeholder="Username">
+                            <input type="text" name="login" id=""  placeholder="Username">
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +61,7 @@
                             <label for="password">Password</label>
                         </td>
                         <td>
-                            <input type="password" name="password" id="" required placeholder="Mot de passe">
+                            <input type="password" name="password" id=""  placeholder="Mot de passe">
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +76,6 @@
             <div>
                 <?php
                     echo "Votre Numero de Session est : <strong>".session_id().'</strong><br/>';
-
                 ?>
             </div>
     </section>
