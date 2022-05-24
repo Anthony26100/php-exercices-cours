@@ -57,3 +57,13 @@ label{
 input{
     padding: 2px;
 }
+
+section.column{
+    flex-direction: row;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
