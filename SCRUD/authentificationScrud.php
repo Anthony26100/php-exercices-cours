@@ -9,6 +9,11 @@
         exit();
     }
     
+    if(isset($_POST['rechercher_client'])){
+        header("Location: rechercher_client.php");
+        exit();
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +35,7 @@
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="ARTICLE" name="env_article"/>
             <input type="submit" value="AJOUTER" name="ajouter_article"/>
+            <input type="submit" value="RECHERCHER" name="rechercher_client"/>
         </form>
     </section>
     <section>   
