@@ -1,54 +1,38 @@
-<?php
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
-<html lang="FR-fr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="#">
-    <title>Chiffrage HASH</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>hashing</title>
 </head>
 <body>
     <section>
-
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <label for="login">Login :</label>
-            <input type="text" name="login" placeholder="Identifiant">
-            <label for="password">Password : </label>
-            <input type="password" name="password" placeholder="Mot de passe">
-            <input type="submit" value="SOUMETTRE">
-
-
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+            <input type="text" name="identifiant" value="identifiant" required placeholder="identifiant">
+            <input type="password" name="password" value="password" required placeholder="password">
+            <input type="submit" name="valider" value="valider">
+            <input type="reset" name="annuler" value="annuler">
         </form>
     </section>
-    <section>
-        <?php
-        // Ne jamais faire ça !
-            var_dump($_POST['password']); // Permet d'afficher le chemin et le nombre de caractere qui te retourne
-            var_dump(md5($_POST['password']));
-            var_dump(md5("-/*54".$_POST['password']));
-            // salt ,"-/" c'est un rajout
-            var_dump(crypt(md5($_POST['password']),"-/"));
-        // Ne jamais faire ça !
 
+    <?php
+        var_dump($_POST['password']);
+        var_dump(md5("-/*54".$_POST['password']));
+        var_dump(crypt(md5($_POST['password']),"-/"));
+        // ne jamais faire ça
 
         $password=$_POST['password'];
 
-        var_dump(hash("sha256",$password));
-        var_dump(hash("sha512",$password));
+        var_dump(hash("sha256", $password));
+        var_dump(hash("sha512", $password));
 
-        // Utilisation de l'algorithme en password de hash
+        var_dump(password_hash($password,PASSWORD_DEFAULT ));
+        var_dump(password_verify($password,PASSWORD_DEFAULT));
+        var_dump(password_verify($password,PASSWORD_BCRYPT));
 
-        var_dump(password_hash($password))
-
-        ?>
-    </section>
+        // faire la différence entre l'encodage,chiffrement, cryptographie
+    ?>
 </body>
 </html>
