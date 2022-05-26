@@ -28,15 +28,11 @@
         var_dump(hash("sha256", $password));
         var_dump(hash("sha512", $password));
 
-<<<<<<< HEAD
         var_dump(password_hash($password,PASSWORD_DEFAULT ));
         var_dump(password_verify($password,PASSWORD_DEFAULT));
         var_dump(password_verify($password,PASSWORD_BCRYPT));
-=======
-        // var_dump(password_hash($password));
->>>>>>> b4d71a4fb68e6b53c8e1bbe51a0f700f2b1313d8
 
-        // faire la différence entre l'encodage,chiffrement, cryptographie
+        // faire la différence entre l'encodage, chiffrement, cryptographie
     ?>
 </body>
 </html>
