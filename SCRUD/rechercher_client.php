@@ -13,7 +13,7 @@
     <section class="column">
         
         <form action="traitementscrud.php" method="post">
-            <label for="Id_Client">Identifiant Article : </label>
+            <label for="Id_Client">Identifiant Client : </label>
             <input type="text" name="id" id="" required><br/>
             <div>
                 <input type="submit" name="envoyer" value="ENVOYER">
